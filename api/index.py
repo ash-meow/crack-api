@@ -31,7 +31,7 @@ def duelscheck():
     key = request.args.get('licenseKey')
 
     return jsonify({
-        "version": 1.5,
+        "version": "1.5",
         "status_overview": "success",
         "status_msg": "meow cracked",
         "status_id": "200",
