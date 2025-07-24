@@ -24,6 +24,14 @@ def zel(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
+@app.route('/license/zel2/id/<id>') # ZelAuctions
+def zel2(id):
+    return jsonify({
+        "owner": "ch1ppie",
+        "product": "ZelTeams",
+        "ips": [request.remote_addr],
+        "creation_date": time()
+    }), 200
 @app.route('/license/utils/id/<id>') # DonutUtils
 def utils(id):
     return jsonify({
