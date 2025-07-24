@@ -57,3 +57,9 @@ def duelsauth():
     return jsonify({
         "token": "meowmeowmrrp"
     }), 200
+@app.route('/version/product/<product>')
+def version(product):
+    return jsonify({
+        "product": product,
+        "version": "2.3.1"
+    }), 200
