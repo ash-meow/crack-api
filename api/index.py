@@ -43,7 +43,7 @@ def duelscheck():
         "discord_id": "0w0"
     }), 200
     
-@app.route('/api/authenticate/')
+@app.route('/api/authenticate/', methods = ['POST'])
 def duelsauth():
     return jsonify({
         "token": "meowmeowmrrp"
