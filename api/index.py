@@ -35,6 +35,7 @@ def duelscheck():
         "status_overview": "success",
         "status_msg": "meow cracked",
         "status_id": "200",
+        "status_code": 200,
         "main_class": "space.hugster.duels.DuelsPlugin",
         "plugin_data": "plugin data here",
         "clientname": "ch1ppie",
