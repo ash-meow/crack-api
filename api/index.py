@@ -14,5 +14,5 @@ def core(id):
         "owner": "ch1ppie",
         "product": "DonutCore",
         "ips": [request.remote_addr],
-        "creation_date": time.time()
+        "creation_date": time.gmtime()
     }), 200
