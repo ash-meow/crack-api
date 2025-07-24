@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return 'Hello, World!'
 
-@app.route('/license/id/core/<id>')
+@app.route('/license/id/core/<id>') # DonutCore
 def core(id):
     return jsonify({
         "owner": "ch1ppie",
@@ -16,7 +16,7 @@ def core(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
-@app.route('/license/zel/id/<id>')
+@app.route('/license/zel/id/<id>') # ZelAuctions
 def zel(id):
     return jsonify({
         "owner": "ch1ppie",
@@ -24,7 +24,7 @@ def zel(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
-@app.route('/api/client/', methods = ['POST', 'GET'])
+@app.route('/api/client/', methods = ['POST', 'GET']) # DonutDuels
 def duelscheck():
     hwid = request.args.get('hwid')
     product = request.args.get('product')
@@ -43,7 +43,7 @@ def duelscheck():
         "discord_id": "0w0"
     }), 200
     
-@app.route('/api/authenticate/', methods = ['POST'])
+@app.route('/api/authenticate/', methods = ['POST']) # DonutDuels
 def duelsauth():
     return jsonify({
         "token": "meowmeowmrrp"
