@@ -24,7 +24,7 @@ def zel(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
-@app.route('/api/client/', methods = ['POST', 'GET']) # DonutDuels
+@app.route('/api/client', methods = ['POST', 'GET']) # DonutDuels
 def duelscheck():
     hwid = request.args.get('hwid')
     product = request.args.get('product')
@@ -43,7 +43,7 @@ def duelscheck():
         "discord_id": "0w0"
     }), 200
     
-@app.route('/api/authenticate/', methods = ['POST']) # DonutDuels
+@app.route('/api/authenticate', methods = ['POST']) # DonutDuels
 def duelsauth():
     return jsonify({
         "token": "meowmeowmrrp"
