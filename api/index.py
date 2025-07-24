@@ -24,6 +24,14 @@ def zel(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
+@app.route('/license/utils/id/<id>') # DonutUtils
+def zel(id):
+    return jsonify({
+        "owner": "ch1ppie",
+        "product": "DonutUtils",
+        "ips": [request.remote_addr],
+        "creation_date": time()
+    }), 200
 @app.route('/api/client', methods = ['POST', 'GET']) # DonutDuels
 def duelscheck():
     hwid = request.args.get('hwid')
