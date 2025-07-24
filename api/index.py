@@ -24,7 +24,7 @@ def zel(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
-@app.route('/api/client/')
+@app.route('/api/client/', methods = ['POST', 'GET'])
 def duelscheck():
     hwid = request.args.get('hwid')
     product = request.args.get('product')
