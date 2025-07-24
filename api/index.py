@@ -24,3 +24,27 @@ def zel(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
+@app.route('/api/client/')
+def duelscheck():
+    hwid = request.args.get('hwid')
+    product = request.args.get('product')
+    key = request.args.get('licenseKey')
+
+    return jsonify({
+        "version": 1.5,
+        "status_overview": "success",
+        "status_msg": "meow cracked",
+        "status_id": "200",
+        "main_class": "space.hugster.duels.DuelsPlugin",
+        "plugin_data": "plugin data here",
+        "clientname": "ch1ppie",
+        "discord_username": "ch1ppie",
+        "discord_tag": "uwu",
+        "discord_id": "0w0"
+    }), 200
+    
+@app.route('/api/authenticate/')
+def duelsauth():
+    return jsonify({
+        "token": "meowmeowmrrp"
+    }), 200
