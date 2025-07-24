@@ -9,7 +9,7 @@ def home():
     return 'Hello, World!'
 
 @app.route('/license/id/core/<id>')
-def id():
+def core():
     return jsonify({
         "owner": "ch1ppie",
         "product": "DonutCore",
