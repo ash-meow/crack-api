@@ -25,7 +25,7 @@ def zel(id):
         "creation_date": time()
     }), 200
 @app.route('/license/utils/id/<id>') # DonutUtils
-def zel(id):
+def utils(id):
     return jsonify({
         "owner": "ch1ppie",
         "product": "DonutUtils",
