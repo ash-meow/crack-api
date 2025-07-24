@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'hi :D'
+    return 'hii :D'
 
 @app.route('/license/id/core/<id>') # DonutCore
 def core(id):
