@@ -32,6 +32,14 @@ def zel2(id):
         "ips": [request.remote_addr],
         "creation_date": time()
     }), 200
+@app.route('/license/shards/id/<id>') # ZelAuctions
+def shards(id):
+    return jsonify({
+        "owner": "ch1ppie",
+        "product": "Shards",
+        "ips": [request.remote_addr],
+        "creation_date": time()
+    }), 200
 @app.route('/license/topduels/id/<id>') # TopDuels
 def topduels(id):
     return jsonify({
